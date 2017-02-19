@@ -1,0 +1,12 @@
+[Unit]
+Description=Kibana Service
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/sysconfi/kibana
+Type=simple
+ExecStart=/opt/kibana-5.2.1-linux-x86_64/bin
+user=kibana
+
+[Install]
+WantedBy=multi-user.target
